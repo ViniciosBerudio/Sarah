@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Para meu momoi💗</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Feliz dia dos namorados meu amor❤️.</h1>
+
+    <audio id="musica" autoplay loop>
+        <source src="JVKE - golden hour (Official Lyric Video).mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+      </audio>
+
+
+    <p>Eu te amo❤️</p>
+
+
+    <button onclick="mostrarMensagem(); tocarMusica()">Clique aqui</button>
+    <div id="mensagem" class="mensagem"></div>
+
+
+    <div class="galeria">
+        <h2>Fotinhas😘❤️</h2>
+        <div class="fotos">
+            <img src="Fotos/ft1.jpg" alt="foto1">
+            <img src="Fotos/ft2.jpg" alt="foto2">
+            <img src="Fotos/ft3.jpg" alt="foto3">
+            <img src="Fotos/ft4.jpg" alt="foto4">
+            <img src="Fotos/ft6.jpg" alt="foto5">
+            <img src="Fotos/ft77.jpg" alt="foto6">
+            <img src="Fotos/ft9.jpg" alt="foto7">
+            
+        </div>
+        <div id="lightbox" class="lightbox">
+            <span class="fechar" onclick="fecharLightbox()">x</span>
+            <img id="img-ampliada" src="" alt="Foto ampliada">
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script>
+        const numCoracoes = 30;
+      
+        for (let i = 0; i < numCoracoes; i++) {
+          let heart = document.createElement("div");
+          heart.innerHTML = "❤️";
+          heart.style.position = "fixed";
+          heart.style.left = Math.random() * 100 + "vw";
+          heart.style.animation = `cair ${Math.random() * 5 + 5}s linear infinite`;
+          heart.style.fontSize = `${Math.random() * 20 + 10}px`;
+          document.body.appendChild(heart);
+        }
+      
+        const style = document.createElement("style");
+        style.innerHTML = `
+          @keyframes cair {
+            0% { top: -10px; opacity: 1; }
+            100% { top: 100vh; opacity: 0; }
+          }
+        `;
+        document.head.appendChild(style);
+      </script>
+
+</body>
+</html>
